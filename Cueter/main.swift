@@ -8,5 +8,9 @@
 
 import Foundation
 
-print("Hello, World!")
+let bizzareCard = Flashcard(first: "bizzare",
+    second: "dziwaczny",
+    hints: ["strange", "fanatic", "weird", "odd"])
 
+
+print(bizzareCard)
