@@ -27,6 +27,7 @@
 		AE7CF0FC1C4D38BF0004BABF /* Cueter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Cueter; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7CF0FF1C4D38BF0004BABF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AE7CF1081C4D39DE0004BABF /* Flashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
+		AE7CF10D1C4D5B9A0004BABF /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +44,7 @@
 		AE7CF0F31C4D38BF0004BABF = {
 			isa = PBXGroup;
 			children = (
+				AE7CF10D1C4D5B9A0004BABF /* readme.md */,
 				AE7CF0FE1C4D38BF0004BABF /* Cueter */,
 				AE7CF0FD1C4D38BF0004BABF /* Products */,
 			);
@@ -59,6 +61,7 @@
 		AE7CF0FE1C4D38BF0004BABF /* Cueter */ = {
 			isa = PBXGroup;
 			children = (
+				AE7CF10A1C4D3F340004BABF /* Data */,
 				AE7CF1061C4D39720004BABF /* Sources */,
 			);
 			path = Cueter;
@@ -79,6 +82,13 @@
 				AE7CF1081C4D39DE0004BABF /* Flashcard.swift */,
 			);
 			name = models;
+			sourceTree = "<group>";
+		};
+		AE7CF10A1C4D3F340004BABF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +269,7 @@
 				AE7CF1051C4D38BF0004BABF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
