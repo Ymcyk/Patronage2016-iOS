@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AE7CF1001C4D38BF0004BABF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7CF0FF1C4D38BF0004BABF /* main.swift */; };
 		AE7CF1091C4D39DE0004BABF /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7CF1081C4D39DE0004BABF /* Flashcard.swift */; };
+		AEBC16761C500858002C7393 /* FlashcardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBC16751C500858002C7393 /* FlashcardSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,7 @@
 		AE7CF0FF1C4D38BF0004BABF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AE7CF1081C4D39DE0004BABF /* Flashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
 		AE7CF10D1C4D5B9A0004BABF /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		AEBC16751C500858002C7393 /* FlashcardSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +63,6 @@
 		AE7CF0FE1C4D38BF0004BABF /* Cueter */ = {
 			isa = PBXGroup;
 			children = (
-				AE7CF10A1C4D3F340004BABF /* Data */,
 				AE7CF1061C4D39720004BABF /* Sources */,
 			);
 			path = Cueter;
@@ -80,15 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				AE7CF1081C4D39DE0004BABF /* Flashcard.swift */,
+				AEBC16751C500858002C7393 /* FlashcardSet.swift */,
 			);
 			name = models;
-			sourceTree = "<group>";
-		};
-		AE7CF10A1C4D3F340004BABF /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEBC16761C500858002C7393 /* FlashcardSet.swift in Sources */,
 				AE7CF1091C4D39DE0004BABF /* Flashcard.swift in Sources */,
 				AE7CF1001C4D38BF0004BABF /* main.swift in Sources */,
 			);
