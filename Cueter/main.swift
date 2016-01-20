@@ -8,9 +8,22 @@
 
 import Foundation
 
-let bizzareCard = Flashcard(first: "bizzare",
-    second: "dziwaczny",
-    hints: ["strange", "fanatic", "weird", "odd"])
+// Zadanie 1
 
+let firstWord = Flashcard(firstPage: "Card", secondPage: "Kartka",
+    hints: ["Page", "Leaf", "You write on it"])
+let secondWord = Flashcard(firstPage: "Dog", secondPage: "Pies")
+let thirdWord = Flashcard()
 
-print(bizzareCard)
+print(firstWord)
+print(secondWord)
+print(thirdWord)
+
+/*
+let stack = FlashcardSet(theme: "Podstawy", learning: "English", known: "Polish")
+stack.addWord(Flashcard(firstPage: "Home", secondPage: "Dom", hints: ["House", "Place where you live"]))
+stack.addWord(Flashcard(firstPage: "Dog", secondPage: "Pies"))
+
+print(stack)
+
+*/
