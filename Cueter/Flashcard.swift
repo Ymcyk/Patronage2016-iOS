@@ -10,21 +10,21 @@ import Foundation
 
 public typealias Word = String
 
-class Flashcard: CustomStringConvertible {
+class Flashcard: CustomStringConvertible, Hashable {
     
     var firstPage: Word
     var secondPage: Word
     var isLearned = false
     var hints: [String]?
     
-    init(first: Word, second: Word, hints: [String]? = nil) {
-        firstPage = first
-        secondPage = second
+    init(firstPage: Word, secondPage: Word, hints: [String]? = nil) {
+        self.firstPage = firstPage
+        self.secondPage = secondPage
         self.hints = hints
     }
     
     convenience init() {
-        self.init(first: "[none]", second: "[none]")
+        self.init(firstPage: "[none]", secondPage: "[none]")
     }
     
     var description: String {
@@ -33,6 +33,17 @@ class Flashcard: CustomStringConvertible {
             let strTemp = hintString.joinWithSeparator(", ")
             strBuild += " [\(strTemp)]"
         }
+        strBuild += (isLearned) ? " \u{2714}" : " \u{2718}"
         return strBuild
     }
+    
+    var hashValue: Int {
+        get {
+            return firstPage.lowercaseString.hash
+        }
+    }
+}
+
+func ==(lhs: Flashcard, rhs: Flashcard) -> Bool {
+    return lhs.firstPage == rhs.secondPage
 }
