@@ -6,10 +6,10 @@
 //  Copyright © 2016 myApps. All rights reserved.
 //
 
-import Foundation
+import Cocoa
 
-// Zadanie 1
-
+// Zadanie 2
+/*
 let firstWord = Flashcard(firstPage: "Card", secondPage: "Kartka",
     hints: ["Page", "Leaf", "You write on it"])
 let secondWord = Flashcard(firstPage: "Dog", secondPage: "Pies")
@@ -17,7 +17,11 @@ let thirdWord = Flashcard()
 
 print(firstWord)
 print(secondWord)
-print(thirdWord)
+print(thirdWord)*/
+
+let word = Flashcard(firstPage: "Home", secondPage: "Dom", hints: [.Text(text: "Where you live"), .Text(text: "House")])
+
+print(word)
 
 /*
 let stack = FlashcardSet(theme: "Podstawy", learning: "English", known: "Polish")
