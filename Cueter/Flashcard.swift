@@ -15,9 +15,9 @@ class Flashcard: CustomStringConvertible, Hashable {
     var firstPage: Word
     var secondPage: Word
     var isLearned = false
-    var hints: [String]?
+    var hints: [Hint]?
     
-    init(firstPage: Word, secondPage: Word, hints: [String]? = nil) {
+    init(firstPage: Word, secondPage: Word, hints: [Hint]? = nil) {
         self.firstPage = firstPage
         self.secondPage = secondPage
         self.hints = hints
@@ -30,8 +30,12 @@ class Flashcard: CustomStringConvertible, Hashable {
     var description: String {
         var strBuild = "\(firstPage) -> \(secondPage)"
         if let hintString = hints {
-            let strTemp = hintString.joinWithSeparator(", ")
-            strBuild += " [\(strTemp)]"
+            
+            let strTemp = hintString.map({ (hint) -> String in
+                return hint.description
+            })
+            //let strTemp = hintString.joinWithSeparator(", ")
+            strBuild += " [\(strTemp.joinWithSeparator(", "))]"
         }
         strBuild += (isLearned) ? " \u{2714}" : " \u{2718}"
         return strBuild
