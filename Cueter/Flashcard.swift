@@ -10,7 +10,7 @@ import Foundation
 
 public typealias Word = String
 
-class Flashcard: CustomStringConvertible, Hashable {
+class Flashcard: CustomStringConvertible, Equatable {
     
     var firstPage: Word
     var secondPage: Word
@@ -32,22 +32,34 @@ class Flashcard: CustomStringConvertible, Hashable {
         if let hintString = hints {
             
             let strTemp = hintString.map({ (hint) -> String in
-                return hint.description
+                return String(hint)
             })
-            //let strTemp = hintString.joinWithSeparator(", ")
+            
             strBuild += " [\(strTemp.joinWithSeparator(", "))]"
         }
         strBuild += (isLearned) ? " \u{2714}" : " \u{2718}"
         return strBuild
     }
     
-    var hashValue: Int {
-        get {
-            return firstPage.lowercaseString.hash
-        }
-    }
 }
 
 func ==(lhs: Flashcard, rhs: Flashcard) -> Bool {
-    return lhs.firstPage == rhs.secondPage
+    return lhs.firstPage == rhs.firstPage
+}
+
+func ==(lhs: Flashcard, rhs: String) -> Bool {
+    return lhs.firstPage == rhs
+}
+
+extension Flashcard: CustomDebugStringConvertible {
+    var debugDescription: String {
+        var strBuild = "\(firstPage) -> \(secondPage)\n"
+        if let hintString = hints {
+            let strTemp = hintString.map({ (hint) -> String in
+                return "\(hint.debugDescription)"
+            })
+            strBuild += strTemp.joinWithSeparator("\n")
+        }
+        return strBuild + "\n"
+    }
 }
