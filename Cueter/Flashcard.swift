@@ -13,9 +13,16 @@ import Foundation
 public typealias Word = String
 
 /*
+ *  Protokół uczących obiektów
+ */
+protocol Learnable {
+    var isLearned: Bool { get }
+}
+
+/*
  *  Klasa fiszek
  */
-class Flashcard: CustomStringConvertible, Equatable {
+class Flashcard: CustomStringConvertible, Equatable, Learnable {
     
     var firstPage: Word
     var secondPage: Word
