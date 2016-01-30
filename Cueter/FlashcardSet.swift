@@ -1,5 +1,5 @@
 //
-//  StackOfCards.swift
+//  FlashcardSet.swift
 //  Cueter
 //
 //  Created by Piotr Zielinski on 20.01.2016.
@@ -51,7 +51,18 @@ class FlashcardSet: CustomStringConvertible {
     }
 }
 
-// rozszerzenie o subscript, można odwoływać się do fiszek po słowie z pierwszej strony
+/*
+ *  rozszerzenie SequenceType o metodę, zwracającą elementy nienauczone 
+ */
+extension SequenceType where Generator.Element: Learnable {
+    func nonLearned() -> [Generator.Element] {
+        return self.filter({ $0.isLearned == false })
+    }
+}
+
+/*
+ *  rozszerzenie o subscript, można odwoływać się do fiszek po słowie z pierwszej strony
+ */
 extension FlashcardSet {
     subscript(index: String) -> Flashcard?{
         let element = self.flashcards.filter({$0 == index})
