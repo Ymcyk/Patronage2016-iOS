@@ -9,25 +9,18 @@
 import Cocoa
 
 // Zadanie 2
-/*
-let firstWord = Flashcard(firstPage: "Card", secondPage: "Kartka",
-    hints: ["Page", "Leaf", "You write on it"])
-let secondWord = Flashcard(firstPage: "Dog", secondPage: "Pies")
-let thirdWord = Flashcard()
 
-print(firstWord)
-print(secondWord)
-print(thirdWord)*/
-
-let word = Flashcard(firstPage: "Home", secondPage: "Dom", hints: [.Text(text: "Where you live"), .Text(text: "House")])
-
-print(word)
-
-/*
 let stack = FlashcardSet(theme: "Podstawy", learning: "English", known: "Polish")
-stack.addWord(Flashcard(firstPage: "Home", secondPage: "Dom", hints: ["House", "Place where you live"]))
-stack.addWord(Flashcard(firstPage: "Dog", secondPage: "Pies"))
+stack.addWord(Flashcard(firstPage: "Apple", secondPage: "Jabłko", hints: [Hint.Text(text: "Grows on a tree"),
+    Hint.Text(text: "You eat it"), Hint.Image(image: NSImage(byReferencingFile: "/Users/Piotr/Pictures/chin.png"), title: "Apple hint")]))
 
-print(stack)
+stack.addWord(Flashcard(firstPage: "Dog", secondPage: "Pies", hints: [Hint.Image(image: NSImage(byReferencingFile: "/Users/Piotr/Pictures/chin.png"), title: "Apple hint"), Hint.Music(music: NSSound(contentsOfFile: "/Users/Piotr/phaser/resources/tutorials/04 Advanced TypeScript Projects/assets/title3.mp3", byReference: true), title: nil)]))
 
-*/
+debugPrint(stack["Apple"]!)
+debugPrint(stack["Dog"]!)
+
+if let bizarre = stack["bizarre"]{
+    print(bizarre)
+} else {
+    print("słowo nie istnieje w zbiorze")
+}
