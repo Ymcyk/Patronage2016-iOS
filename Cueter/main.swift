@@ -9,12 +9,14 @@
 import Cocoa
 
 /*
- *  Funkcja zwracająca listę elementów nienauczonych
+ *  Funkcja zwracająca listę elementów nienauczonych. Wykorzystuję jednak rozszerzenie
+ *  do typu w klasie FlashcardSet.
  */
+/*
 func nonLearned(learnArray: [Learnable]) -> [Learnable] {
     return learnArray.filter({ $0.isLearned == false })
 }
-
+*/
 // Zadanie 3
 
 let stack = FlashcardSet(theme: "Podstawy", learning: "English", known: "Polish")
