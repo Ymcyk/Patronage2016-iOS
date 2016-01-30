@@ -8,6 +8,10 @@
 
 import Foundation
 
+/*
+ *  FlashcardSet - agregat, klasa zawierająca fiszki. W niej jest informacja
+ *  o języku, którego się uczymy.
+ */
 class FlashcardSet: CustomStringConvertible {
     let wordsTheme: String
     let learningLang: String
@@ -47,6 +51,7 @@ class FlashcardSet: CustomStringConvertible {
     }
 }
 
+// rozszerzenie o subscript, można odwoływać się do fiszek po słowie z pierwszej strony
 extension FlashcardSet {
     subscript(index: String) -> Flashcard?{
         let element = self.flashcards.filter({$0 == index})
