@@ -8,6 +8,9 @@
 
 import Cocoa
 
+/*
+ *  Hint - enumerator podpowiedzi
+ */
 enum Hint {
     case Text(text: String)
     case Image(image: NSImage?, title: String?)
@@ -15,8 +18,10 @@ enum Hint {
     case Music(music: NSSound?, title: String?)
 }
 
+// rozszerzenie do enumeratora o wymagane protokoły
 extension Hint: CustomStringConvertible {
     var description: String {
+        
         var desc: String
         
         switch self {
