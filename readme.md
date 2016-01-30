@@ -11,8 +11,8 @@ Klasa fiszek.
 
 ## FlashcardSet
 
-Klasa przechowywująca fiszki oraz ich opis.
+Klasa agregująca fiszki oraz ich opis.
 
 ## Hint
 
-Enumerator Hint
+Enumerator podpowiedzi Hint
