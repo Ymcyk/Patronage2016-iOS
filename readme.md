@@ -8,7 +8,7 @@ Klasa fiszek.
 
 ## FlashcardSet
 
-Klasa agregująca fiszki oraz informację o języku.
+Klasa agregująca fiszki oraz zawierająca informację o języku.
 Za pomocą metody addWord można dodawać nowe słówka do listy.
 Zawiera także description.
 
