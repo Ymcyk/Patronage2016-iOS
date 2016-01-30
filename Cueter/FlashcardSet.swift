@@ -12,10 +12,10 @@ class FlashcardSet: CustomStringConvertible {
     let wordsTheme: String
     let learningLang: String
     let secondLang: String
-    var flashcards: Set<Flashcard>
+    var flashcards: [Flashcard]
     
     init(theme: String, learning: String, known: String,
-        words: Set<Flashcard>? = nil) {
+        words: [Flashcard]? = nil) {
             
             wordsTheme = theme
             learningLang = learning
@@ -26,12 +26,30 @@ class FlashcardSet: CustomStringConvertible {
     func addWord(card: Flashcard) -> Bool {
         let addTest = flashcards.contains(card)
         if !addTest {
-            flashcards.insert(card)
+            flashcards.append(card)
         }
         return !addTest
     }
     
     var description: String {
-        return "'\(wordsTheme)', \(learningLang) -> \(secondLang), \(flashcards.count) word(s)"
+        
+        var polishWordName: String
+        
+        switch flashcards.count {
+        case let number where number == 0 || number > 4:
+            polishWordName = "słów"
+        case 1:
+            polishWordName = "słowo"
+        default:
+            polishWordName = "słowa"
+        }
+        return "'\(wordsTheme)', \(learningLang) -> \(secondLang), \(flashcards.count) \(polishWordName)"
+    }
+}
+
+extension FlashcardSet {
+    subscript(index: String) -> Flashcard?{
+        let element = self.flashcards.filter({$0 == index})
+        return element.last
     }
 }
