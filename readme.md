@@ -2,17 +2,16 @@
 Prototypowa aplikacja do nauki słówek stworzona na Patronage 2016 z grupy iOS.
 
 
-## Pliki swift
-
-
 ## Flashcard
 
 Klasa fiszek.
 
 ## FlashcardSet
 
-Klasa agregująca fiszki oraz ich opis.
+Klasa agregująca fiszki oraz informację o języku.
+Za pomocą metody addWord można dodawać nowe słówka do listy.
+Zawiera także description.
 
 ## Hint
 
-Enumerator podpowiedzi Hint
+Enumerator podpowiedzi. 
