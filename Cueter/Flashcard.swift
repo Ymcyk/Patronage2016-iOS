@@ -8,8 +8,13 @@
 
 import Foundation
 
+// typealias, bo w przyszłości można by dodać np.: synonimy
+// a Word byłby strukturą
 public typealias Word = String
 
+/*
+ *  Klasa fiszek
+ */
 class Flashcard: CustomStringConvertible, Equatable {
     
     var firstPage: Word
@@ -43,6 +48,7 @@ class Flashcard: CustomStringConvertible, Equatable {
     
 }
 
+// przeładowanie operatorów
 func ==(lhs: Flashcard, rhs: Flashcard) -> Bool {
     return lhs.firstPage == rhs.firstPage
 }
@@ -60,6 +66,6 @@ extension Flashcard: CustomDebugStringConvertible {
             })
             strBuild += strTemp.joinWithSeparator("\n")
         }
-        return strBuild + "\n"
+        return strBuild
     }
 }
